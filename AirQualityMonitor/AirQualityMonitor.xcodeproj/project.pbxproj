@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0047DFBB2003B6890049A495 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFBA2003B6890049A495 /* Coordinator.swift */; };
+		0047DFBF2003B93E0049A495 /* AirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFBE2003B93E0049A495 /* AirQualityService.swift */; };
+		0047DFC12003D7410049A495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFC02003D7410049A495 /* Constants.swift */; };
+		0047DFC32003FC910049A495 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFC22003FC910049A495 /* AppCoordinator.swift */; };
+		0047DFCA2004017F0049A495 /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFC82004017F0049A495 /* StationListViewController.swift */; };
+		0047DFCB2004017F0049A495 /* StationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0047DFC92004017F0049A495 /* StationListViewController.xib */; };
+		0047DFCD200401A80049A495 /* StationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFCC200401A80049A495 /* StationListViewModel.swift */; };
+		0047DFCF200402640049A495 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFCE200402640049A495 /* UIResponderExtension.swift */; };
+		0047DFD12004066D0049A495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0047DFD02004066D0049A495 /* LaunchScreen.storyboard */; };
 		00F56EA92000FBB60011C630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F56EA82000FBB60011C630 /* AppDelegate.swift */; };
-		00F56EAB2000FBB60011C630 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F56EAA2000FBB60011C630 /* ViewController.swift */; };
-		00F56EAE2000FBB60011C630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F56EAC2000FBB60011C630 /* Main.storyboard */; };
 		00F56EB02000FBB60011C630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F56EAF2000FBB60011C630 /* Assets.xcassets */; };
-		00F56EB32000FBB60011C630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F56EB12000FBB60011C630 /* LaunchScreen.storyboard */; };
+		5B6B44404898DF7A097C0706 /* Pods_AirQualityMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A59AEBBAC0EF591904538B8 /* Pods_AirQualityMonitor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0047DFBA2003B6890049A495 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0047DFBE2003B93E0049A495 /* AirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityService.swift; sourceTree = "<group>"; };
+		0047DFC02003D7410049A495 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0047DFC22003FC910049A495 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0047DFC82004017F0049A495 /* StationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		0047DFC92004017F0049A495 /* StationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationListViewController.xib; sourceTree = "<group>"; };
+		0047DFCC200401A80049A495 /* StationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewModel.swift; sourceTree = "<group>"; };
+		0047DFCE200402640049A495 /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
+		0047DFD02004066D0049A495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F56EA52000FBB60011C630 /* AirQualityMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F56EA82000FBB60011C630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00F56EAA2000FBB60011C630 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		00F56EAD2000FBB60011C630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00F56EAF2000FBB60011C630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00F56EB22000FBB60011C630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F56EB42000FBB60011C630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1340AA033565AA890F7455 /* Pods-AirQualityMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		6A59AEBBAC0EF591904538B8 /* Pods_AirQualityMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE1A1B2EF1A445E2B2A3712 /* Pods-AirQualityMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6B44404898DF7A097C0706 /* Pods_AirQualityMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0047DFB62003B30D0049A495 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFC7200400FD0049A495 /* StationList */,
+				0047DFD02004066D0049A495 /* LaunchScreen.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0047DFB72003B3220049A495 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFBA2003B6890049A495 /* Coordinator.swift */,
+				0047DFC22003FC910049A495 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0047DFB82003B3380049A495 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0047DFB92003B3610049A495 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFC42004007F0049A495 /* Extensions */,
+				00F56EA82000FBB60011C630 /* AppDelegate.swift */,
+				00F56EAF2000FBB60011C630 /* Assets.xcassets */,
+				0047DFC02003D7410049A495 /* Constants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0047DFBC2003B8790049A495 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFBD2003B87E0049A495 /* Services */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0047DFBD2003B87E0049A495 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFBE2003B93E0049A495 /* AirQualityService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0047DFC42004007F0049A495 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFCE200402640049A495 /* UIResponderExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0047DFC7200400FD0049A495 /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				0047DFC82004017F0049A495 /* StationListViewController.swift */,
+				0047DFC92004017F0049A495 /* StationListViewController.xib */,
+				0047DFCC200401A80049A495 /* StationListViewModel.swift */,
+			);
+			path = StationList;
+			sourceTree = "<group>";
+		};
 		00F56E9C2000FBB60011C630 = {
 			isa = PBXGroup;
 			children = (
 				00F56EA72000FBB60011C630 /* AirQualityMonitor */,
 				00F56EA62000FBB60011C630 /* Products */,
+				68EC2E884DFE9D5EBA42BE6A /* Pods */,
+				6A9E9FBD84338390B5A816F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +143,31 @@
 		00F56EA72000FBB60011C630 /* AirQualityMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				00F56EA82000FBB60011C630 /* AppDelegate.swift */,
-				00F56EAA2000FBB60011C630 /* ViewController.swift */,
-				00F56EAC2000FBB60011C630 /* Main.storyboard */,
-				00F56EAF2000FBB60011C630 /* Assets.xcassets */,
-				00F56EB12000FBB60011C630 /* LaunchScreen.storyboard */,
+				0047DFBC2003B8790049A495 /* API */,
+				0047DFB72003B3220049A495 /* Coordinators */,
+				0047DFB82003B3380049A495 /* Models */,
+				0047DFB62003B30D0049A495 /* ViewControllers */,
+				0047DFB92003B3610049A495 /* Supporting Files */,
 				00F56EB42000FBB60011C630 /* Info.plist */,
 			);
 			path = AirQualityMonitor;
+			sourceTree = "<group>";
+		};
+		68EC2E884DFE9D5EBA42BE6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B1340AA033565AA890F7455 /* Pods-AirQualityMonitor.debug.xcconfig */,
+				EDE1A1B2EF1A445E2B2A3712 /* Pods-AirQualityMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A9E9FBD84338390B5A816F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A59AEBBAC0EF591904538B8 /* Pods_AirQualityMonitor.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F56EB72000FBB60011C630 /* Build configuration list for PBXNativeTarget "AirQualityMonitor" */;
 			buildPhases = (
+				5DD058C3132C4A88CA7B2493 /* [CP] Check Pods Manifest.lock */,
 				00F56EA12000FBB60011C630 /* Sources */,
 				00F56EA22000FBB60011C630 /* Frameworks */,
 				00F56EA32000FBB60011C630 /* Resources */,
+				62DDD44F41FBA04D80B61861 /* [CP] Embed Pods Frameworks */,
+				1737C9A33F8BFC28B7782DA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,44 +232,97 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F56EB32000FBB60011C630 /* LaunchScreen.storyboard in Resources */,
+				0047DFD12004066D0049A495 /* LaunchScreen.storyboard in Resources */,
 				00F56EB02000FBB60011C630 /* Assets.xcassets in Resources */,
-				00F56EAE2000FBB60011C630 /* Main.storyboard in Resources */,
+				0047DFCB2004017F0049A495 /* StationListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1737C9A33F8BFC28B7782DA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DD058C3132C4A88CA7B2493 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirQualityMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62DDD44F41FBA04D80B61861 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00F56EA12000FBB60011C630 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F56EAB2000FBB60011C630 /* ViewController.swift in Sources */,
+				0047DFBF2003B93E0049A495 /* AirQualityService.swift in Sources */,
+				0047DFBB2003B6890049A495 /* Coordinator.swift in Sources */,
+				0047DFC32003FC910049A495 /* AppCoordinator.swift in Sources */,
+				0047DFCA2004017F0049A495 /* StationListViewController.swift in Sources */,
 				00F56EA92000FBB60011C630 /* AppDelegate.swift in Sources */,
+				0047DFC12003D7410049A495 /* Constants.swift in Sources */,
+				0047DFCF200402640049A495 /* UIResponderExtension.swift in Sources */,
+				0047DFCD200401A80049A495 /* StationListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		00F56EAC2000FBB60011C630 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00F56EAD2000FBB60011C630 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		00F56EB12000FBB60011C630 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00F56EB22000FBB60011C630 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00F56EB52000FBB60011C630 /* Debug */ = {
@@ -272,6 +434,7 @@
 		};
 		00F56EB82000FBB60011C630 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B1340AA033565AA890F7455 /* Pods-AirQualityMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +450,7 @@
 		};
 		00F56EB92000FBB60011C630 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDE1A1B2EF1A445E2B2A3712 /* Pods-AirQualityMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
