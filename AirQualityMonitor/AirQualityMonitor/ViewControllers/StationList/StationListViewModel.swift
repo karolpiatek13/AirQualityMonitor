@@ -12,12 +12,15 @@ import RxSwift
 class StationListViewModel {
     
     var delegate: AppCoordinatorProtocol
+    var stations = PublishSubject<[Station]>()
+    var stationsSection = PublishSubject<[RxDataSourcesSection<Station>]>()
+    var stationsShownSection = PublishSubject<[RxDataSourcesSection<Station>]>()
     let provider = NetworkProvider<AirQualityService>()
     let bag = DisposeBag()
     
     init(delegate: AppCoordinatorProtocol) {
         self.delegate = delegate
-        fetchSensor()
+        fetchStations()
     }
     
     func fetchStations() {
@@ -26,8 +29,11 @@ class StationListViewModel {
             .map([Station].self)
             .subscribe { event in
                 switch event {
-                case .next:
-                    print("next")
+                case .next(let stations):
+                    self.stations.onNext(stations)
+                    let section = [RxDataSourcesSection(header: "", items: stations)]
+                    self.stationsSection.onNext(section)
+                    self.stationsShownSection.onNext(section)
                 case .error:
                     print("error")
                 case .completed:

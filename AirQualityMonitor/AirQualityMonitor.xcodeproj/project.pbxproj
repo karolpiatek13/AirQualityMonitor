@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002388F020050F07006AEFF5 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002388EE20050F07006AEFF5 /* StationCell.swift */; };
+		002388F120050F07006AEFF5 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002388EF20050F07006AEFF5 /* StationCell.xib */; };
+		002388F3200512E7006AEFF5 /* RxDataSourcesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002388F2200512E7006AEFF5 /* RxDataSourcesSection.swift */; };
+		002388F520051E5B006AEFF5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002388F420051E5B006AEFF5 /* UIViewControllerExtension.swift */; };
 		0047DFBB2003B6890049A495 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFBA2003B6890049A495 /* Coordinator.swift */; };
 		0047DFBF2003B93E0049A495 /* AirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFBE2003B93E0049A495 /* AirQualityService.swift */; };
 		0047DFC12003D7410049A495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFC02003D7410049A495 /* Constants.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002388EE20050F07006AEFF5 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		002388EF20050F07006AEFF5 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		002388F2200512E7006AEFF5 /* RxDataSourcesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDataSourcesSection.swift; sourceTree = "<group>"; };
+		002388F420051E5B006AEFF5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0047DFBA2003B6890049A495 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0047DFBE2003B93E0049A495 /* AirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityService.swift; sourceTree = "<group>"; };
 		0047DFC02003D7410049A495 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -66,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002388ED20050EE1006AEFF5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				002388EE20050F07006AEFF5 /* StationCell.swift */,
+				002388EF20050F07006AEFF5 /* StationCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0047DFB62003B30D0049A495 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +120,7 @@
 				00F56EA82000FBB60011C630 /* AppDelegate.swift */,
 				00F56EAF2000FBB60011C630 /* Assets.xcassets */,
 				0047DFC02003D7410049A495 /* Constants.swift */,
+				002388F2200512E7006AEFF5 /* RxDataSourcesSection.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -129,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				0047DFCE200402640049A495 /* UIResponderExtension.swift */,
+				002388F420051E5B006AEFF5 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -136,6 +155,7 @@
 		0047DFC7200400FD0049A495 /* StationList */ = {
 			isa = PBXGroup;
 			children = (
+				002388ED20050EE1006AEFF5 /* Cell */,
 				0047DFC82004017F0049A495 /* StationListViewController.swift */,
 				0047DFC92004017F0049A495 /* StationListViewController.xib */,
 				0047DFCC200401A80049A495 /* StationListViewModel.swift */,
@@ -255,6 +275,7 @@
 			files = (
 				0047DFD12004066D0049A495 /* LaunchScreen.storyboard in Resources */,
 				00F56EB02000FBB60011C630 /* Assets.xcassets in Resources */,
+				002388F120050F07006AEFF5 /* StationCell.xib in Resources */,
 				0047DFCB2004017F0049A495 /* StationListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,10 +355,12 @@
 			files = (
 				0047DFBF2003B93E0049A495 /* AirQualityService.swift in Sources */,
 				5E71D8F920049D48008AA023 /* Station.swift in Sources */,
+				002388F520051E5B006AEFF5 /* UIViewControllerExtension.swift in Sources */,
 				0047DFBB2003B6890049A495 /* Coordinator.swift in Sources */,
 				0047DFC32003FC910049A495 /* AppCoordinator.swift in Sources */,
 				0047DFCA2004017F0049A495 /* StationListViewController.swift in Sources */,
 				5E71D8FF2004A41D008AA023 /* NetworkProvider.swift in Sources */,
+				002388F3200512E7006AEFF5 /* RxDataSourcesSection.swift in Sources */,
 				5E71D9052004CF3D008AA023 /* Param.swift in Sources */,
 				00F56EA92000FBB60011C630 /* AppDelegate.swift in Sources */,
 				5E71D8FD20049E8F008AA023 /* Commune.swift in Sources */,
@@ -346,6 +369,7 @@
 				0047DFC12003D7410049A495 /* Constants.swift in Sources */,
 				0047DFCF200402640049A495 /* UIResponderExtension.swift in Sources */,
 				0047DFCD200401A80049A495 /* StationListViewModel.swift in Sources */,
+				002388F020050F07006AEFF5 /* StationCell.swift in Sources */,
 				5E71D9032004CDB6008AA023 /* Sensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
