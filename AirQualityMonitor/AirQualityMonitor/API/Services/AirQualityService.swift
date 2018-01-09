@@ -23,12 +23,12 @@ extension AirQualityService: TargetType {
         switch self {
         case .allStations:
             return "station/findAll"
-        case .stationSensors:
-            return "station/sensors"
-        case .sensorData:
-            return "data/getData"
-        case .stationData:
-            return "aqindex/getIndex"
+        case .stationSensors(let id):
+            return "station/sensors/\(id)"
+        case .sensorData(let id):
+            return "data/getData/\(id)"
+        case .stationData(let id):
+            return "aqindex/getIndex/\(id)"
         }
     }
     
@@ -51,12 +51,6 @@ extension AirQualityService: TargetType {
     
     var task: Task {
         switch self {
-        case let .stationSensors(id):
-            return .requestParameters(parameters: ["stationId": id], encoding: URLEncoding.queryString)
-        case let .sensorData(id):
-            return .requestParameters(parameters: ["sensorId": id], encoding: URLEncoding.queryString)
-        case let .stationData(id):
-            return .requestParameters(parameters: ["stationId": id], encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }

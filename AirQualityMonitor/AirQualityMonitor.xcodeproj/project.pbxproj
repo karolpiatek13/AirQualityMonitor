@@ -19,6 +19,13 @@
 		00F56EA92000FBB60011C630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F56EA82000FBB60011C630 /* AppDelegate.swift */; };
 		00F56EB02000FBB60011C630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F56EAF2000FBB60011C630 /* Assets.xcassets */; };
 		5B6B44404898DF7A097C0706 /* Pods_AirQualityMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A59AEBBAC0EF591904538B8 /* Pods_AirQualityMonitor.framework */; };
+		5E71D8F920049D48008AA023 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8F820049D48008AA023 /* Station.swift */; };
+		5E71D8FB20049E4E008AA023 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8FA20049E4E008AA023 /* City.swift */; };
+		5E71D8FD20049E8F008AA023 /* Commune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8FC20049E8F008AA023 /* Commune.swift */; };
+		5E71D8FF2004A41D008AA023 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8FE2004A41D008AA023 /* NetworkProvider.swift */; };
+		5E71D9012004A92C008AA023 /* LoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9002004A92C008AA023 /* LoggerPlugin.swift */; };
+		5E71D9032004CDB6008AA023 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9022004CDB6008AA023 /* Sensor.swift */; };
+		5E71D9052004CF3D008AA023 /* Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9042004CF3D008AA023 /* Param.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		00F56EAF2000FBB60011C630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F56EB42000FBB60011C630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1340AA033565AA890F7455 /* Pods-AirQualityMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		5E71D8F820049D48008AA023 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Station.swift; path = AirQualityMonitor/Coordinators/Station.swift; sourceTree = SOURCE_ROOT; };
+		5E71D8FA20049E4E008AA023 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = City.swift; path = AirQualityMonitor/Coordinators/City.swift; sourceTree = SOURCE_ROOT; };
+		5E71D8FC20049E8F008AA023 /* Commune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Commune.swift; path = AirQualityMonitor/Coordinators/Commune.swift; sourceTree = SOURCE_ROOT; };
+		5E71D8FE2004A41D008AA023 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		5E71D9002004A92C008AA023 /* LoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPlugin.swift; sourceTree = "<group>"; };
+		5E71D9022004CDB6008AA023 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sensor.swift; path = AirQualityMonitor/API/Services/Sensor.swift; sourceTree = SOURCE_ROOT; };
+		5E71D9042004CF3D008AA023 /* Param.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Param.swift; path = AirQualityMonitor/API/Services/Param.swift; sourceTree = SOURCE_ROOT; };
 		6A59AEBBAC0EF591904538B8 /* Pods_AirQualityMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE1A1B2EF1A445E2B2A3712 /* Pods-AirQualityMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityMonitor/Pods-AirQualityMonitor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +87,11 @@
 		0047DFB82003B3380049A495 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E71D8F820049D48008AA023 /* Station.swift */,
+				5E71D8FA20049E4E008AA023 /* City.swift */,
+				5E71D8FC20049E8F008AA023 /* Commune.swift */,
+				5E71D9022004CDB6008AA023 /* Sensor.swift */,
+				5E71D9042004CF3D008AA023 /* Param.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0047DFBD2003B87E0049A495 /* Services */,
+				5E71D8FE2004A41D008AA023 /* NetworkProvider.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -100,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0047DFBE2003B93E0049A495 /* AirQualityService.swift */,
+				5E71D9002004A92C008AA023 /* LoggerPlugin.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -312,13 +333,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0047DFBF2003B93E0049A495 /* AirQualityService.swift in Sources */,
+				5E71D8F920049D48008AA023 /* Station.swift in Sources */,
 				0047DFBB2003B6890049A495 /* Coordinator.swift in Sources */,
 				0047DFC32003FC910049A495 /* AppCoordinator.swift in Sources */,
 				0047DFCA2004017F0049A495 /* StationListViewController.swift in Sources */,
+				5E71D8FF2004A41D008AA023 /* NetworkProvider.swift in Sources */,
+				5E71D9052004CF3D008AA023 /* Param.swift in Sources */,
 				00F56EA92000FBB60011C630 /* AppDelegate.swift in Sources */,
+				5E71D8FD20049E8F008AA023 /* Commune.swift in Sources */,
+				5E71D8FB20049E4E008AA023 /* City.swift in Sources */,
+				5E71D9012004A92C008AA023 /* LoggerPlugin.swift in Sources */,
 				0047DFC12003D7410049A495 /* Constants.swift in Sources */,
 				0047DFCF200402640049A495 /* UIResponderExtension.swift in Sources */,
 				0047DFCD200401A80049A495 /* StationListViewModel.swift in Sources */,
+				5E71D9032004CDB6008AA023 /* Sensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
