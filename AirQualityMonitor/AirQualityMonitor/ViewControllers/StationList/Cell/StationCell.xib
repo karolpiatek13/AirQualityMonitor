@@ -73,6 +73,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="arrowButton" destination="fgh-xr-LJy" id="wZe-xO-bfX"/>
                 <outlet property="cityTitleLabel" destination="1Kk-7q-ej0" id="6ee-dl-9Gu"/>
                 <outlet property="cityValueLabel" destination="DWt-TG-1da" id="Qc3-8a-kYM"/>
                 <outlet property="stationNameTitleLabel" destination="H9n-y7-8cF" id="xFn-6M-48Q"/>

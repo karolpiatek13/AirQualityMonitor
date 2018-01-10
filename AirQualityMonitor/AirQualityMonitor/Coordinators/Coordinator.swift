@@ -14,11 +14,16 @@ protocol CoordinatorProtocol {
 
 class Coordinator {
     
+    var parent: Coordinator?
     var childCoordinators = [Coordinator]()
-    let navigationViewController: UINavigationController
+    let navigationController: UINavigationController
+    
+    init() {
+        self.navigationController = UINavigationController()
+    }
     
     init(navigationController: UINavigationController) {
-        self.navigationViewController = navigationController
+        self.navigationController = navigationController
     }
     
     func addChildCoordinator(childCoordinator: Coordinator...) {

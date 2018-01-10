@@ -6,7 +6,7 @@
 //  Copyright © 2018 KarolPiatek. All rights reserved.
 //
 
-import UIKit
+import RxSwift
 
 class StationCell: UITableViewCell {
 
@@ -14,6 +14,9 @@ class StationCell: UITableViewCell {
     @IBOutlet weak var stationNameValueLabel: UILabel!
     @IBOutlet weak var cityTitleLabel: UILabel!
     @IBOutlet weak var cityValueLabel: UILabel!
+    @IBOutlet weak var arrowButton: UIButton!
+    
+    var bag = DisposeBag()
     
     func configure(station: Station) {
         stationNameTitleLabel.text = "Station name:"

@@ -9,19 +9,41 @@
 import Foundation
 
 protocol AppCoordinatorProtocol {
-    
+    func showMainTabBar(station: Station)
 }
 
-class AppCoordinator: Coordinator, AppCoordinatorProtocol {
+final class AppCoordinator: Coordinator {
     
     func start() {
-        navigationViewController.setNavigationBarHidden(true, animated: false)
+        navigationController.setNavigationBarHidden(true, animated: false)
         presentStationList()
     }
     
     private func presentStationList() {
         let viewModel = StationListViewModel(delegate: self)
         let viewController = StationListViewController(viewModel: viewModel)
-        navigationViewController.setViewControllers([viewController], animated: false)
+        navigationController.setViewControllers([viewController], animated: false)
+    }
+}
+
+extension AppCoordinator: AppCoordinatorProtocol {
+    
+    func showMainTabBar(station: Station) {
+        let coordinators: [Coordinator & CoordinatorProtocol] = [
+            AirQualityCoordinator(station: station),
+            SensorListCoordinator(station: station),
+            StationDetailsCoordinator(station: station)
+        ]
+        
+        showInTabBarViewController(coordinators: coordinators)
+    }
+    
+    private func showInTabBarViewController(coordinators: [Coordinator & CoordinatorProtocol]) {
+        coordinators.forEach {
+            $0.start()
+            self.childCoordinators.append($0)
+        }
+        let viewController = TabBarViewController(controllers: coordinators.map({ $0.navigationController }))
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -42,6 +42,10 @@ class StationListViewModel {
         }.disposed(by: bag)
     }
     
+    func showStation(station: Station) {
+        delegate.showMainTabBar(station: station)
+    }
+    
     func fetchSensor() {
         provider.rx.request(.stationSensors(id: 14))
             .asObservable()
