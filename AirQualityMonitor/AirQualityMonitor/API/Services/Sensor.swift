@@ -16,9 +16,9 @@ struct Sensor {
 
 extension Sensor: Decodable {
     enum SensorKeys: String, CodingKey {
-        case id = "id"
-        case stationId = "stationId"
-        case param = "param"
+        case id
+        case stationId
+        case param
     }
     
     init(from decoder: Decoder) throws {

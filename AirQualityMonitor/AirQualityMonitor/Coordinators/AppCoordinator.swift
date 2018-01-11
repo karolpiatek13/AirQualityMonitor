@@ -31,7 +31,7 @@ extension AppCoordinator: AppCoordinatorProtocol {
     func showMainTabBar(station: Station) {
         let coordinators: [Coordinator & CoordinatorProtocol] = [
             AirQualityCoordinator(station: station),
-            SensorListCoordinator(station: station),
+            ChartsCoordinator(station: station),
             StationDetailsCoordinator(station: station)
         ]
         

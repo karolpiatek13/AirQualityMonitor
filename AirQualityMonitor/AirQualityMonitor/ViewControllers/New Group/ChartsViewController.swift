@@ -1,20 +1,20 @@
 //
-//  StationDetailsViewController.swift
+//  ChartsViewController.swift
 //  AirQualityMonitor
 //
-//  Created by Karol on 10.01.2018.
+//  Created by Karol on 11.01.2018.
 //  Copyright © 2018 KarolPiatek. All rights reserved.
 //
 
 import UIKit
 
-class StationDetailsViewController: UIViewController {
+class ChartsViewController: UIViewController {
 
-    var viewModel: StationDetailsViewModel!
+    var viewModel: ChartsViewModel!
     
-    init(viewModel: StationDetailsViewModel) {
+    init(viewModel: ChartsViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: StationDetailsViewController.typeName, bundle: nil)
+        super.init(nibName: ChartsViewController.typeName, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {

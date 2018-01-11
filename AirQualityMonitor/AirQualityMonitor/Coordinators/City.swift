@@ -16,9 +16,9 @@ struct City {
 
 extension City: Decodable {
     enum CityKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
-        case commune = "commune"
+        case id
+        case name
+        case commune
     }
     
     init(from decoder: Decoder) throws {

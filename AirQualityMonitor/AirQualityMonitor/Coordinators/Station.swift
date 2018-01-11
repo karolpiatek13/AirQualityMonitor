@@ -18,11 +18,11 @@ struct Station {
 
 extension Station: Decodable {
     enum StationKeys: String, CodingKey {
-        case id = "id"
-        case stationName = "stationName"
-        case gegrLat = "gegrLat"
-        case gegrLon = "gegrLon"
-        case city = "city"
+        case id
+        case stationName
+        case gegrLat
+        case gegrLon
+        case city
     }
     
     init(from decoder: Decoder) throws {

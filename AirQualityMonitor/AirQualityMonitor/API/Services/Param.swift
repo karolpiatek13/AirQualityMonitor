@@ -17,9 +17,9 @@ struct Param {
 
 extension Param: Decodable {
     enum ParamKeys: String, CodingKey {
-        case paramName = "paramName"
-        case paramFormula = "paramFormula"
-        case paramCode = "paramCode"
+        case paramName
+        case paramFormula
+        case paramCode
         case paramId = "idParam"
     }
     

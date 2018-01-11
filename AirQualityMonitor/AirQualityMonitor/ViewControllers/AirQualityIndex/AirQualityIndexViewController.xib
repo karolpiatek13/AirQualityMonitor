@@ -76,7 +76,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-0C-q8G">
                     <rect key="frame" x="16" y="178" width="288" height="370"/>
                     <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bDv-fx-rDL">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bDv-fx-rDL" customClass="LeftAlignedCollectionViewFlowLayout" customModule="AirQualityMonitor" customModuleProvider="target">
                         <size key="itemSize" width="115" height="110"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>

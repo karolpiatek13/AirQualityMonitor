@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SensorListCoordinator: Coordinator {
+class ChartsCoordinator: Coordinator {
     
     var station: Station
     
@@ -18,10 +18,10 @@ class SensorListCoordinator: Coordinator {
     }
 }
 
-extension SensorListCoordinator: CoordinatorProtocol {
+extension ChartsCoordinator: CoordinatorProtocol {
     
     func start() {
-        let vc = SensorListViewController(viewModel: SensorListViewModel(flowDelegate: self, station: station))
+        let vc = ChartsViewController(viewModel: ChartsViewModel(flowDelegate: self, station: station))
         navigationController.setViewControllers([vc], animated: true)
     }
 }

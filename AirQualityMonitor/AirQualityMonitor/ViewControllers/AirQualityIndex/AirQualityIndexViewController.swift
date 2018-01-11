@@ -35,6 +35,12 @@ class AirQualityIndexViewController: UIViewController {
         super.viewDidLoad()
         setupData()
         setupCollectionView()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+    }
+    
+    @objc
+    func goBack() {
+        
     }
     
     func setupData() {
