@@ -38,13 +38,12 @@ class StationListViewController: UIViewController {
         tableView.register(UINib(nibName: StationCell.typeName, bundle: nil), forCellReuseIdentifier: StationCell.typeName)
         dataSource = RxTableViewSectionedReloadDataSource<RxDataSourcesSection<Station>>(configureCell: { _, tableView, indexPath, item in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: StationCell.typeName, for: indexPath) as? StationCell else { return UITableViewCell() }
-            cell.bag = DisposeBag()
             cell.configure(station: item)
-            cell.arrowButton.rx.tap.subscribe(onNext: {
-                self.viewModel.showStation(station: item)
-            }).disposed(by: cell.bag)
             return cell
         })
+        tableView.rx.modelSelected(Station.self).subscribe(onNext: { item in
+            self.viewModel.showStation(station: item)
+        }).disposed(by: bag)
         guard let dataSource = dataSource else { return }
         viewModel.stationsShownSection.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
     }
