@@ -24,4 +24,9 @@ extension ChartsCoordinator: CoordinatorProtocol {
         let vc = ChartsViewController(viewModel: ChartsViewModel(flowDelegate: self, station: station))
         navigationController.setViewControllers([vc], animated: true)
     }
+    
+    func backToParent() {
+        guard let parentCoordinator = parent as? AppCoordinator else { return }
+        parentCoordinator.backToCoordinator()
+    }
 }

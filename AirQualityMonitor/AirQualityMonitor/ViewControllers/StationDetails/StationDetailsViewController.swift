@@ -28,6 +28,6 @@ class StationDetailsViewController: UIViewController {
     
     @objc
     func goBack() {
-        
+        viewModel.flowDelegate.backToParent()
     }
 }

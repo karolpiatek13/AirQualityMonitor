@@ -40,7 +40,7 @@ class AirQualityIndexViewController: UIViewController {
     
     @objc
     func goBack() {
-        
+        viewModel.flowDelegate.backToParent()
     }
     
     func setupData() {
@@ -56,7 +56,7 @@ class AirQualityIndexViewController: UIViewController {
         collectionView.backgroundColor = .clear
         collectionView.register(UINib(nibName: MeasurementCell.typeName, bundle: nil), forCellWithReuseIdentifier: MeasurementCell.typeName)
         dataSource = RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>(configureCell: { _, collectionView, index, item in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MeasurementCell.typeName, for: index) as! MeasurementCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MeasurementCell.typeName, for: index) as? MeasurementCell else { return UICollectionViewCell() }
             cell.configure(measurement: item)
             return cell
         })

@@ -8,13 +8,9 @@
 
 import RxSwift
 
-class AirQualityViewModel {
+class AirQualityViewModel: BaseTabViewModel {
     
-    var flowDelegate: CoordinatorProtocol
-    var station: Station
     var stationName = Variable<String>("")
-    var measurements: [Measurement]?
-    var measurementsSection = PublishSubject<[RxDataSourcesSection<Measurement>]>()
     var lowestMeasurement = PublishSubject<Measurement>()
     var lastupDate: Observable<String> {
         return lowestMeasurement.asObservable().map { $0.date ?? "" }
@@ -23,53 +19,17 @@ class AirQualityViewModel {
         return lowestMeasurement.asObservable().map { $0.indexLevelEnum ?? IndexNameEnum.noValue }
     }
     
-    let provider = NetworkProvider<AirQualityService>()
-    let bag = DisposeBag()
-    
-    init(flowDelegate: CoordinatorProtocol, station: Station) {
-        self.flowDelegate = flowDelegate
-        self.station = station
+    override init(flowDelegate: CoordinatorProtocol, station: Station) {
+        super.init(flowDelegate: flowDelegate, station: station)
         self.stationName.value = station.stationName ?? ""
-        getStationSensors()
+        getLowestMeasurement()
     }
     
-    func getStationSensors() {
-        provider.rx.request(.stationSensors(id: station.id ?? -1))
-            .asObservable()
-            .share()
-            .map([Sensor].self)
-            .subscribe { event in
-                switch event {
-                case .next(let sensors):
-                    self.measurements = self.getMeasurementList(sensors: sensors)
-                    self.getAirQualityIndex()
-                case .error:
-                    print("error")
-                case .completed:
-                    print("completed")
-                }
-        }.disposed(by: bag)
-    }
-    
-    func getAirQualityIndex() {
-        provider.rx.request(.stationData(id: station.id ?? -1))
-            .asObservable()
-            .share()
-            .map(AirQualityIndex.self)
-            .subscribe { event in
-                switch event {
-                case .next(let airQualityIndex):
-                    guard let measurements = self.measurements else { return }
-                    let newMeasurements = airQualityIndex.assignValues(measurements: measurements)
-                    self.measurements = newMeasurements
-                    self.measurementsSection.onNext([RxDataSourcesSection(header: "", items: newMeasurements)])
-                    self.getLowestMeasurement(measurements: measurements)
-                case .error:
-                    print("error")
-                case .completed:
-                    print("completed")
-                }
-            }.disposed(by: bag)
+    func getLowestMeasurement() {
+        measurementsSection.subscribe(onNext: { item in
+            guard let measurements = super.measurements else { return }
+            self.getLowestMeasurement(measurements: measurements)
+        }).disposed(by: bag)
     }
     
     func getLowestMeasurement(measurements: [Measurement]) {
@@ -82,10 +42,5 @@ class AirQualityViewModel {
             }
         }
         self.lowestMeasurement.onNext(lowestMeas)
-
-    }
-    
-    func getMeasurementList(sensors: [Sensor]) -> [Measurement] {
-        return sensors.map { return Measurement(name: $0.param?.paramName ?? "", code: $0.param?.paramCode ?? "") }
     }
 }

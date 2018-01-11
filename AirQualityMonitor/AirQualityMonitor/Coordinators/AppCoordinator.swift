@@ -10,6 +10,7 @@ import Foundation
 
 protocol AppCoordinatorProtocol {
     func showMainTabBar(station: Station)
+    func backToCoordinator()
 }
 
 final class AppCoordinator: Coordinator {
@@ -41,9 +42,15 @@ extension AppCoordinator: AppCoordinatorProtocol {
     private func showInTabBarViewController(coordinators: [Coordinator & CoordinatorProtocol]) {
         coordinators.forEach {
             $0.start()
+            $0.parent = self
             self.childCoordinators.append($0)
         }
         let viewController = TabBarViewController(controllers: coordinators.map({ $0.navigationController }))
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func backToCoordinator() {
+        navigationController.popViewController(animated: true)
+        childCoordinators.removeAll()
     }
 }

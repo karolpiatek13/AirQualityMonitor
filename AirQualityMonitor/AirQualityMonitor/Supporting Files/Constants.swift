@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let baseUrl = "http://api.gios.gov.pl/pjp-api/rest/"
+    static let animationDuration = 0.5
 }

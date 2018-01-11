@@ -24,4 +24,9 @@ extension AirQualityCoordinator: CoordinatorProtocol {
         let vc = AirQualityIndexViewController(viewModel: AirQualityViewModel(flowDelegate: self, station: station))
         navigationController.setViewControllers([vc], animated: true)
     }
+    
+    func backToParent() {
+        guard let parentCoordinator = parent as? AppCoordinator else { return }
+        parentCoordinator.backToCoordinator()
+    }
 }

@@ -24,4 +24,9 @@ extension StationDetailsCoordinator: CoordinatorProtocol {
         let vc = StationDetailsViewController(viewModel: StationDetailsViewModel(flowDelegate: self,station: station))
         navigationController.setViewControllers([vc], animated: true)
     }
+    
+    func backToParent() {
+        guard let parentCoordinator = parent as? AppCoordinator else { return }
+        parentCoordinator.backToCoordinator()
+    }
 }

@@ -11,11 +11,15 @@ import Foundation
 class Measurement {
     var name: String
     var code: String
+    var sensorId: Int
+    var value: String = "Brak"
     var date: String?
     var indexLevelEnum: IndexNameEnum?
     
-    init(name:String, code: String) {
+    
+    init(name:String, code: String, sensorId: Int) {
         self.name = name
         self.code = code
+        self.sensorId = sensorId
     }
 }

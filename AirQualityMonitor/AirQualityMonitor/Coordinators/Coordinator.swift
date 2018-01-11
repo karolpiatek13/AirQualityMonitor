@@ -10,6 +10,7 @@ import UIKit
 
 protocol CoordinatorProtocol {
     func start()
+    func backToParent()
 }
 
 class Coordinator {
