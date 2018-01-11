@@ -63,21 +63,26 @@ class AirQualityViewModel {
                     let newMeasurements = airQualityIndex.assignValues(measurements: measurements)
                     self.measurements = newMeasurements
                     self.measurementsSection.onNext([RxDataSourcesSection(header: "", items: newMeasurements)])
-                    guard var lowestMeas = measurements.first else { return }
-                    for measurement in measurements {
-                        guard let lowest = lowestMeas.indexLevelEnum?.rawValue,
-                            let current = measurement.indexLevelEnum?.rawValue else { return }
-                        if lowest > current {
-                            lowestMeas = measurement
-                        }
-                    }
-                    self.lowestMeasurement.onNext(lowestMeas)
+                    self.getLowestMeasurement(measurements: measurements)
                 case .error:
                     print("error")
                 case .completed:
                     print("completed")
                 }
             }.disposed(by: bag)
+    }
+    
+    func getLowestMeasurement(measurements: [Measurement]) {
+        guard var lowestMeas = measurements.first else { return }
+        for measurement in measurements {
+            guard let lowest = lowestMeas.indexLevelEnum?.rawValue,
+                let current = measurement.indexLevelEnum?.rawValue else { return }
+            if lowest > current {
+                lowestMeas = measurement
+            }
+        }
+        self.lowestMeasurement.onNext(lowestMeas)
+
     }
     
     func getMeasurementList(sensors: [Sensor]) -> [Measurement] {
