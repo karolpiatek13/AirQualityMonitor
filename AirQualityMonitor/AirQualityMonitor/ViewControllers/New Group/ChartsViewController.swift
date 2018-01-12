@@ -44,11 +44,16 @@ class ChartsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.getData()
+        viewModel.fetchFirstChartData()
     }
     
     func bindData() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        viewModel.displayMeasurement.subscribe(onNext: { measurement in
+            self.measurementName.textColor = measurement.indexLevelEnum?.textColor
+            self.measurementDate.textColor = measurement.indexLevelEnum?.textColor
+            self.measurementValue.textColor = measurement.indexLevelEnum?.textColor
+        }).disposed(by: bag)
         viewModel.displayName.bind(to: measurementName.rx.text).disposed(by: bag)
         viewModel.displayDate.bind(to: measurementDate.rx.text).disposed(by: bag)
         viewModel.displayValue.bind(to: measurementValue.rx.text).disposed(by: bag)
@@ -100,6 +105,7 @@ class ChartsViewController: UIViewController {
         let data = LineChartData()
         let dataSource = LineChartDataSet(values: chartEntryData, label: "")
         dataSource.circleRadius = 0
+        dataSource.colors = [.red]
         
         data.dataSets = [dataSource]
         data.addDataSet(dataSource)

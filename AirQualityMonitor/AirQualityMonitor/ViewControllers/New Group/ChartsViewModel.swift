@@ -11,8 +11,8 @@ import RxSwift
 
 class ChartsViewModel: BaseTabViewModel {
     
-    var chartValues = PublishSubject<[SensorDataRead]>()
-    var displayMeasurement = PublishSubject<Measurement>()
+    var chartValues = BehaviorSubject<[SensorDataRead]>(value: [])
+    var displayMeasurement = BehaviorSubject<Measurement>(value: Measurement())
     var displayDate: Observable<String> {
         return displayMeasurement.asObservable().map { $0.date ?? "" }
     }
@@ -24,10 +24,6 @@ class ChartsViewModel: BaseTabViewModel {
     }
     var displayColor: Observable<UIColor> {
         return displayMeasurement.asObservable().map { $0.indexLevelEnum?.colorValue ?? .white }
-    }
-    
-    func getData() {
-        getStationSensors()
     }
     
     func fetchFirstChartData() {

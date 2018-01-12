@@ -16,6 +16,11 @@ class Measurement {
     var date: String?
     var indexLevelEnum: IndexNameEnum?
     
+    init() {
+        name = ""
+        code = ""
+        sensorId = -1
+    }
     
     init(name:String, code: String, sensorId: Int) {
         self.name = name

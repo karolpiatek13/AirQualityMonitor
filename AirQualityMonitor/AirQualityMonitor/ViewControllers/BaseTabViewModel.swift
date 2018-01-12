@@ -13,7 +13,7 @@ class BaseTabViewModel {
     var flowDelegate: CoordinatorProtocol
     var station: Station
     var measurements: [Measurement]?
-    var measurementsSection = PublishSubject<[RxDataSourcesSection<Measurement>]>()
+    var measurementsSection = BehaviorSubject<[RxDataSourcesSection<Measurement>]>(value: [])
     
     let bag = DisposeBag()
     let provider = NetworkProvider<AirQualityService>()
@@ -21,6 +21,7 @@ class BaseTabViewModel {
     init(flowDelegate: CoordinatorProtocol, station: Station) {
         self.flowDelegate = flowDelegate
         self.station = station
+        getStationSensors()
     }
 
     func getStationSensors() {
