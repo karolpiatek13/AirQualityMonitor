@@ -11,9 +11,10 @@ import Foundation
 struct Station {
     var id: Int?
     var stationName: String?
-    var gegrLat: Double?
-    var gegrLon: Double?
+    var gegrLat: String?
+    var gegrLon: String?
     var city: City?
+    var addressStreet: String?
 }
 
 extension Station: Decodable {
@@ -23,14 +24,16 @@ extension Station: Decodable {
         case gegrLat
         case gegrLon
         case city
+        case addressStreet
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: StationKeys.self)
         id = try? container.decode(Int.self, forKey: .id)
         stationName = try? container.decode(String.self, forKey: .stationName)
-        gegrLat = try? container.decode(Double.self, forKey: .gegrLat)
-        gegrLon = try? container.decode(Double.self, forKey: .gegrLon)
+        gegrLat = try? container.decode(String.self, forKey: .gegrLat)
+        gegrLon = try? container.decode(String.self, forKey: .gegrLon)
         city = try? container.decode(City.self, forKey: .city)
+        addressStreet = try? container.decode(String.self, forKey: .addressStreet)
     }
 }

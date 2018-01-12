@@ -22,6 +22,9 @@ class ChartsViewModel: BaseTabViewModel {
     var displayName: Observable<String> {
         return displayMeasurement.asObservable().map { $0.name }
     }
+    var displayColor: Observable<UIColor> {
+        return displayMeasurement.asObservable().map { $0.indexLevelEnum?.colorValue ?? .white }
+    }
     
     func getData() {
         getStationSensors()

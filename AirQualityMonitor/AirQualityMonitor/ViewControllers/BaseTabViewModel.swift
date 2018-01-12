@@ -21,7 +21,6 @@ class BaseTabViewModel {
     init(flowDelegate: CoordinatorProtocol, station: Station) {
         self.flowDelegate = flowDelegate
         self.station = station
-        getStationSensors()
     }
 
     func getStationSensors() {

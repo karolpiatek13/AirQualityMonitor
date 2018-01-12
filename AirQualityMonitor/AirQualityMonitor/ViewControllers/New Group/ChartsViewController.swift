@@ -52,6 +52,9 @@ class ChartsViewController: UIViewController {
         viewModel.displayName.bind(to: measurementName.rx.text).disposed(by: bag)
         viewModel.displayDate.bind(to: measurementDate.rx.text).disposed(by: bag)
         viewModel.displayValue.bind(to: measurementValue.rx.text).disposed(by: bag)
+        viewModel.displayColor.subscribe(onNext: {
+            self.lastMeasurementView.backgroundColor = $0
+        }).disposed(by: bag)
         viewModel.chartValues.subscribe(onNext: { items in
             self.setChartData(data: items)
             self.chartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0)

@@ -38,9 +38,9 @@ class AirQualityIndexViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
     }
     
-    @objc
-    func goBack() {
-        viewModel.flowDelegate.backToParent()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getStationSensors()
     }
     
     func setupData() {
@@ -61,5 +61,10 @@ class AirQualityIndexViewController: UIViewController {
             return cell
         })
         viewModel.measurementsSection.bind(to: collectionView.rx.items(dataSource: dataSource!)).disposed(by: bag)
+    }
+    
+    @objc
+    func goBack() {
+        viewModel.flowDelegate.backToParent()
     }
 }

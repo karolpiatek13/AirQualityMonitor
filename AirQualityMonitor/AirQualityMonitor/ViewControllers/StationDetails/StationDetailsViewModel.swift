@@ -6,15 +6,27 @@
 //  Copyright © 2018 KarolPiatek. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+import MapKit
 
 class StationDetailsViewModel {
     
     var flowDelegate: CoordinatorProtocol
-    var station: Station
+    var station = BehaviorSubject<Station>(value: Station())
+    var stationName: Observable<String> {
+        return station.asObservable().map { $0.stationName ?? "Brak danych" }
+    }
+    var stationAddress: Observable<String> {
+        return station.asObservable().map {
+            guard let street = $0.addressStreet, let city = $0.city?.name else {
+                return $0.city?.name ?? "Brak Danych"
+            }
+            return street + ", " + city
+        }
+    }
     
     init(flowDelegate: CoordinatorProtocol, station: Station) {
         self.flowDelegate = flowDelegate
-        self.station = station
+        self.station.onNext(station)
     }
 }
