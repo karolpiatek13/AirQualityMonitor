@@ -29,11 +29,11 @@
                 </tableView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TQb-4Z-Bjk">
                     <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                    <color key="barTintColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="barTintColor" red="0.74762933239999996" green="0.93276768629999995" blue="0.9789651036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </subviews>
-            <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.74762933235180984" green="0.93276768628471129" blue="0.97896510362625122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PgR-Ko-phw" secondAttribute="bottom" id="AZg-c6-e6W"/>
                 <constraint firstItem="TQb-4Z-Bjk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="NeU-xa-8lB"/>

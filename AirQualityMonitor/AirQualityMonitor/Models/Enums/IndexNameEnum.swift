@@ -49,6 +49,15 @@ enum IndexNameEnum {
         }
     }
     
+    var textColor: UIColor {
+        switch self {
+        case .noValue:
+            return .black
+        default:
+            return .white
+        }
+    }
+    
     var textValue: String {
         switch self {
         case .veryGood:

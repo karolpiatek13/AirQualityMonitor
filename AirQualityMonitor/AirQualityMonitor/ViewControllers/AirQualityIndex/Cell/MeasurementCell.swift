@@ -16,8 +16,11 @@ class MeasurementCell: UICollectionViewCell {
     
     func configure(measurement: Measurement) {
         indexCodeLabel.text = measurement.code
+        indexCodeLabel.textColor = measurement.indexLevelEnum?.textColor
         indexValueLabel.text = measurement.indexLevelEnum?.textValue
+        indexValueLabel.textColor = measurement.indexLevelEnum?.textColor
         nameLabel.text = measurement.name
+        nameLabel.textColor = measurement.indexLevelEnum?.textColor
         backgroundColor = measurement.indexLevelEnum?.colorValue
     }
 }
