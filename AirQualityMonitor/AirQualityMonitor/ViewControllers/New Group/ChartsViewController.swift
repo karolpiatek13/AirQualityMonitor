@@ -46,7 +46,6 @@ class ChartsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchFirstChartData()
-        showEmptyView(on: sensorsCollectionView)
     }
     
     func bindData() {
