@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AirQualityIndexViewController" customModule="AirQualityMonitor" customModuleProvider="target">
+            <connections>
+                <outlet property="airStatusValueLabel" destination="IK0-Vh-YSy" id="nXb-CF-IaJ"/>
+                <outlet property="airStatusView" destination="dpg-BS-ide" id="dDJ-kQ-6m7"/>
+                <outlet property="collectionView" destination="7Jt-0C-q8G" id="VWE-Po-UHl"/>
+                <outlet property="lastupDateLabel" destination="Zz7-jN-D0w" id="hCq-XW-KNp"/>
+                <outlet property="stationNameLanel" destination="lAt-jP-Sgk" id="VPY-mk-78p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stationName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAt-jP-Sgk">
+                    <rect key="frame" x="111.5" y="28" width="97" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.1357667061" green="0.47674688040000002" blue="0.61270621830000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lastupDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz7-jN-D0w">
+                    <rect key="frame" x="230" y="57" width="74" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.1357667061" green="0.47674688040000002" blue="0.61270621830000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ostatni pomiar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk1-LK-QVU">
+                    <rect key="frame" x="16" y="57" width="105" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.13576670608392352" green="0.47674688037879964" blue="0.61270621827411165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpg-BS-ide">
+                    <rect key="frame" x="16" y="91" width="288" height="79"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stan powietrza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-8A-OD6">
+                            <rect key="frame" x="93" y="16" width="102.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="airStatusValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK0-Vh-YSy">
+                            <rect key="frame" x="89.5" y="42" width="109.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.40154944889999999" green="0.70503785919999995" blue="0.83623493019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="IK0-Vh-YSy" secondAttribute="bottom" constant="16" id="9D6-Qw-rbo"/>
+                        <constraint firstItem="Rfh-8A-OD6" firstAttribute="centerX" secondItem="dpg-BS-ide" secondAttribute="centerX" id="Qtw-PD-gkr"/>
+                        <constraint firstItem="IK0-Vh-YSy" firstAttribute="top" secondItem="Rfh-8A-OD6" secondAttribute="bottom" constant="8" id="WkK-7U-DWO"/>
+                        <constraint firstItem="Rfh-8A-OD6" firstAttribute="top" secondItem="dpg-BS-ide" secondAttribute="top" constant="16" id="a3f-a1-W5k"/>
+                        <constraint firstItem="IK0-Vh-YSy" firstAttribute="centerX" secondItem="dpg-BS-ide" secondAttribute="centerX" id="qxH-aD-BSm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-0C-q8G">
+                    <rect key="frame" x="16" y="178" width="288" height="370"/>
+                    <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bDv-fx-rDL" customClass="LeftAlignedCollectionViewFlowLayout" customModule="AirQualityMonitor" customModuleProvider="target">
+                        <size key="itemSize" width="115" height="110"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.74762933239999996" green="0.93276768629999995" blue="0.9789651036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Jt-0C-q8G" secondAttribute="bottom" constant="20" id="60O-5U-ZBF"/>
+                <constraint firstItem="dpg-BS-ide" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KHc-jZ-5KL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dpg-BS-ide" secondAttribute="trailing" constant="16" id="QNM-1h-oZ1"/>
+                <constraint firstItem="lAt-jP-Sgk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="TaB-y0-IYt"/>
+                <constraint firstItem="lAt-jP-Sgk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="XDE-eS-Gxx"/>
+                <constraint firstItem="7Jt-0C-q8G" firstAttribute="top" secondItem="dpg-BS-ide" secondAttribute="bottom" constant="8" id="XQT-Uz-asy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Jt-0C-q8G" secondAttribute="trailing" constant="16" id="XeY-8Z-abA"/>
+                <constraint firstItem="wk1-LK-QVU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eKd-rN-UL8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zz7-jN-D0w" secondAttribute="trailing" constant="16" id="lqU-AY-t4L"/>
+                <constraint firstItem="wk1-LK-QVU" firstAttribute="top" secondItem="lAt-jP-Sgk" secondAttribute="bottom" constant="8" id="ndA-y5-lIX"/>
+                <constraint firstItem="dpg-BS-ide" firstAttribute="top" secondItem="Zz7-jN-D0w" secondAttribute="bottom" constant="16" id="o7x-tf-BWv"/>
+                <constraint firstItem="7Jt-0C-q8G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="rid-z1-3L2"/>
+                <constraint firstItem="Zz7-jN-D0w" firstAttribute="top" secondItem="lAt-jP-Sgk" secondAttribute="bottom" constant="8" id="tSW-sn-uug"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
