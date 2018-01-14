@@ -53,7 +53,6 @@
 		5E71D8FB20049E4E008AA023 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8FA20049E4E008AA023 /* City.swift */; };
 		5E71D8FD20049E8F008AA023 /* Commune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8FC20049E8F008AA023 /* Commune.swift */; };
 		5E71D8FF2004A41D008AA023 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D8FE2004A41D008AA023 /* NetworkProvider.swift */; };
-		5E71D9012004A92C008AA023 /* LoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9002004A92C008AA023 /* LoggerPlugin.swift */; };
 		5E71D9032004CDB6008AA023 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9022004CDB6008AA023 /* Sensor.swift */; };
 		5E71D9052004CF3D008AA023 /* Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9042004CF3D008AA023 /* Param.swift */; };
 /* End PBXBuildFile section */
@@ -107,7 +106,6 @@
 		5E71D8FA20049E4E008AA023 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = City.swift; path = AirQualityMonitor/Coordinators/City.swift; sourceTree = SOURCE_ROOT; };
 		5E71D8FC20049E8F008AA023 /* Commune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Commune.swift; path = AirQualityMonitor/Coordinators/Commune.swift; sourceTree = SOURCE_ROOT; };
 		5E71D8FE2004A41D008AA023 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		5E71D9002004A92C008AA023 /* LoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPlugin.swift; sourceTree = "<group>"; };
 		5E71D9022004CDB6008AA023 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sensor.swift; path = AirQualityMonitor/API/Services/Sensor.swift; sourceTree = SOURCE_ROOT; };
 		5E71D9042004CF3D008AA023 /* Param.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Param.swift; path = AirQualityMonitor/API/Services/Param.swift; sourceTree = SOURCE_ROOT; };
 		6A59AEBBAC0EF591904538B8 /* Pods_AirQualityMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				0047DFBE2003B93E0049A495 /* AirQualityService.swift */,
-				5E71D9002004A92C008AA023 /* LoggerPlugin.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				00F51ACA200688E300AEFAB3 /* MeasurementCell.swift in Sources */,
 				00F51AA4200619A800AEFAB3 /* StationDetailsCoordinator.swift in Sources */,
 				5E71D8FB20049E4E008AA023 /* City.swift in Sources */,
-				5E71D9012004A92C008AA023 /* LoggerPlugin.swift in Sources */,
 				00F51A9E20060B3D00AEFAB3 /* TabBarViewController.swift in Sources */,
 				0047DFC12003D7410049A495 /* Constants.swift in Sources */,
 				00F51AE12007F94F00AEFAB3 /* StringExtension.swift in Sources */,

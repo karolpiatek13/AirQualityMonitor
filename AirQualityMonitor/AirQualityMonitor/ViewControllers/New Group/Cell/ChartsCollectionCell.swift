@@ -12,7 +12,8 @@ class ChartsCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var codeLabel: UILabel!
     
-    func configure(measurement: Measurement) {
+    func configure(measurement: Measurement, isSelected: Bool) {
         codeLabel.text = measurement.code
+        self.backgroundColor = isSelected ? .white : .clear
     }
 }

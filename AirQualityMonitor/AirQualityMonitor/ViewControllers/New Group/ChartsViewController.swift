@@ -24,6 +24,7 @@ class ChartsViewController: UIViewController {
     
     var dataSource: RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>?
     var viewModel: ChartsViewModel!
+    var selectedRow = 0
     let bag = DisposeBag()
     
     init(viewModel: ChartsViewModel) {
@@ -45,6 +46,7 @@ class ChartsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchFirstChartData()
+        showEmptyView(on: sensorsCollectionView)
     }
     
     func bindData() {
@@ -71,7 +73,7 @@ class ChartsViewController: UIViewController {
         sensorsCollectionView.register(UINib(nibName: ChartsCollectionCell.typeName, bundle: nil), forCellWithReuseIdentifier: ChartsCollectionCell.typeName)
         dataSource = RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>(configureCell: { _, collectionView, index, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChartsCollectionCell.typeName, for: index) as? ChartsCollectionCell else { return UICollectionViewCell() }
-            cell.configure(measurement: item)
+            cell.configure(measurement: item, isSelected: self.selectedRow == index.row)
             return cell
         })
         viewModel.measurementsSection.bind(to: sensorsCollectionView.rx.items(dataSource: dataSource!)).disposed(by: bag)
@@ -80,13 +82,8 @@ class ChartsViewController: UIViewController {
             self.lastMeasurementView.backgroundColor = item.indexLevelEnum?.colorValue
         }).disposed(by: bag)
         sensorsCollectionView.rx.itemSelected.subscribe(onNext: { indexPath in
-            UIView.animate(withDuration: Constants.animationDuration, animations: {
-            for cell in self.sensorsCollectionView.visibleCells {
-                cell.backgroundColor = .clear
-            }
-            guard let cell = self.sensorsCollectionView.cellForItem(at: indexPath) as? ChartsCollectionCell else { return }
-            cell.backgroundColor = .white
-            })
+            self.selectedRow = indexPath.row
+            self.sensorsCollectionView.reloadData()
         }).disposed(by: bag)
     }
     

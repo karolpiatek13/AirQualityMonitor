@@ -19,7 +19,7 @@ class NetworkProvider<Target>: MoyaProvider<Target> where Target: Moya.TargetTyp
                   stubClosure: @escaping StubClosure = MoyaProvider.neverStub,
                   callbackQueue: DispatchQueue? = DispatchQueue.main,
                   manager: Manager = MoyaProvider<Target>.defaultAlamofireManager(),
-                  plugins: [PluginType] = [LoggerPlugin()],
+                  plugins: [PluginType] = [],
                   trackInflights: Bool = false) {
         super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, plugins: plugins, trackInflights: trackInflights)
     }
