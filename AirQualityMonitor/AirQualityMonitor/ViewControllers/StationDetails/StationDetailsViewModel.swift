@@ -18,10 +18,7 @@ class StationDetailsViewModel {
     }
     var stationAddress: Observable<String> {
         return station.asObservable().map {
-            guard let street = $0.addressStreet, let city = $0.city?.name else {
-                return $0.city?.name ?? "Brak Danych"
-            }
-            return street + ", " + city
+            $0.getDisplayAddress()
         }
     }
     

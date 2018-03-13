@@ -15,6 +15,13 @@ struct Station {
     var gegrLon: String?
     var city: City?
     var addressStreet: String?
+    
+    func getDisplayAddress() -> String {
+        guard let street = self.addressStreet, let city = self.city?.name else {
+            return self.city?.name ?? "Brak Danych"
+        }
+        return street + ", " + city
+    }
 }
 
 extension Station: Decodable {

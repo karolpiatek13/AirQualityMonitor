@@ -10,6 +10,10 @@ import Foundation
 
 extension String {
     
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+    
     func toChartDateFormat() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"

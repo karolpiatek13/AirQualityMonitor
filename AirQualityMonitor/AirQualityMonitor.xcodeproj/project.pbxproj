@@ -20,6 +20,7 @@
 		0047DFCD200401A80049A495 /* StationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFCC200401A80049A495 /* StationListViewModel.swift */; };
 		0047DFCF200402640049A495 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFCE200402640049A495 /* UIResponderExtension.swift */; };
 		0047DFD12004066D0049A495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0047DFD02004066D0049A495 /* LaunchScreen.storyboard */; };
+		00CE0D9720582CD600FAADAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00CE0D9920582CD600FAADAB /* Localizable.strings */; };
 		00F51A9E20060B3D00AEFAB3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51A9D20060B3D00AEFAB3 /* TabBarViewController.swift */; };
 		00F51AA02006198600AEFAB3 /* AirQualityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51A9F2006198600AEFAB3 /* AirQualityCoordinator.swift */; };
 		00F51AA22006199800AEFAB3 /* ChartsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51AA12006199800AEFAB3 /* ChartsCoordinator.swift */; };
@@ -71,6 +72,8 @@
 		0047DFCC200401A80049A495 /* StationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewModel.swift; sourceTree = "<group>"; };
 		0047DFCE200402640049A495 /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
 		0047DFD02004066D0049A495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00CE0D9820582CD600FAADAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		00CE0D9A20582CE400FAADAB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00F51A9D20060B3D00AEFAB3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		00F51A9F2006198600AEFAB3 /* AirQualityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityCoordinator.swift; sourceTree = "<group>"; };
 		00F51AA12006199800AEFAB3 /* ChartsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCoordinator.swift; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 				0047DFC02003D7410049A495 /* Constants.swift */,
 				002388F2200512E7006AEFF5 /* RxDataSourcesSection.swift */,
 				00F51ACC2007527300AEFAB3 /* LeftAlignedCollectionView.swift */,
+				00CE0D9920582CD600FAADAB /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -402,6 +406,7 @@
 				00F51ACB200688E300AEFAB3 /* MeasurementCell.xib in Resources */,
 				002388F120050F07006AEFF5 /* StationCell.xib in Resources */,
 				00F51AAB200624A800AEFAB3 /* StationDetailsViewController.xib in Resources */,
+				00CE0D9720582CD600FAADAB /* Localizable.strings in Resources */,
 				00F51AD22007661100AEFAB3 /* ChartsViewController.xib in Resources */,
 				00F51AD920076EF200AEFAB3 /* ChartsCollectionCell.xib in Resources */,
 				0047DFCB2004017F0049A495 /* StationListViewController.xib in Resources */,
