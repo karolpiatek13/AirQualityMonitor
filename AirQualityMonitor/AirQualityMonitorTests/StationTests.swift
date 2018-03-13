@@ -12,6 +12,9 @@ import XCTest
 class StationTests: XCTestCase {
     
     var station: Station!
+    let cityNameValue = "City"
+    let streetNameValue = "Street"
+    let expectedAddress = "Street, City"
     
     override func setUp() {
         super.setUp()
@@ -19,12 +22,36 @@ class StationTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        station = nil
         super.tearDown()
     }
     
-    func testStationDisplayAddressNilCase() {
+    func testDisplayAddressNilCase() {
         let displayAdress = station.getDisplayAddress()
         XCTAssert(displayAdress == "NoData".localized)
+    }
+    
+    func testDisplayAddressCityNameCase() {
+        citySetup()
+        let displayAdress = station.getDisplayAddress()
+        XCTAssert(displayAdress == cityNameValue)
+    }
+    
+    func citySetup() {
+        let cityName = cityNameValue
+        var city = City()
+        city.name = cityName
+        station.city = city
+    }
+    
+    func testDisplayAddressFullNameCase() {
+        citySetup()
+        streetSetup()
+        let displayAdress = station.getDisplayAddress()
+        XCTAssert(displayAdress == expectedAddress)
+    }
+    
+    func streetSetup() {
+        station.addressStreet = streetNameValue
     }
 }
