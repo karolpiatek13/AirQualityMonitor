@@ -1,5 +1,5 @@
 //
-//  AirQualityMonitorTests.swift
+//  StationTests.swift
 //  AirQualityMonitorTests
 //
 //  Created by Karol on 13.03.2018.
@@ -9,11 +9,13 @@
 import XCTest
 @testable import AirQualityMonitor
 
-class AirQualityMonitorTests: XCTestCase {
+class StationTests: XCTestCase {
+    
+    var station: Station!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        station = Station()
     }
     
     override func tearDown() {
@@ -22,12 +24,7 @@ class AirQualityMonitorTests: XCTestCase {
     }
     
     func testStationDisplayAddressNilCase() {
-        let station = Station()
         let displayAdress = station.getDisplayAddress()
         XCTAssert(displayAdress == "NoData".localized)
-    }
-    
-    func test() {
-        
     }
 }
