@@ -18,7 +18,7 @@ struct Station {
     
     func getDisplayAddress() -> String {
         guard let street = self.addressStreet, let city = self.city?.name else {
-            return self.city?.name ?? "Brak Danych"
+            return self.city?.name ?? "NoData".localized
         }
         return street + ", " + city
     }

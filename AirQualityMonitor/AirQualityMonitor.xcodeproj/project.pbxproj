@@ -20,6 +20,7 @@
 		0047DFCD200401A80049A495 /* StationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFCC200401A80049A495 /* StationListViewModel.swift */; };
 		0047DFCF200402640049A495 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047DFCE200402640049A495 /* UIResponderExtension.swift */; };
 		0047DFD12004066D0049A495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0047DFD02004066D0049A495 /* LaunchScreen.storyboard */; };
+		00CE0D8E2058231300FAADAB /* AirQualityMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE0D8D2058231300FAADAB /* AirQualityMonitorTests.swift */; };
 		00CE0D9720582CD600FAADAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00CE0D9920582CD600FAADAB /* Localizable.strings */; };
 		00F51A9E20060B3D00AEFAB3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51A9D20060B3D00AEFAB3 /* TabBarViewController.swift */; };
 		00F51AA02006198600AEFAB3 /* AirQualityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51A9F2006198600AEFAB3 /* AirQualityCoordinator.swift */; };
@@ -58,6 +59,16 @@
 		5E71D9052004CF3D008AA023 /* Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71D9042004CF3D008AA023 /* Param.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		00CE0D902058231300FAADAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F56E9D2000FBB60011C630 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F56EA42000FBB60011C630;
+			remoteInfo = AirQualityMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		002388EE20050F07006AEFF5 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		002388EF20050F07006AEFF5 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
@@ -72,6 +83,9 @@
 		0047DFCC200401A80049A495 /* StationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewModel.swift; sourceTree = "<group>"; };
 		0047DFCE200402640049A495 /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
 		0047DFD02004066D0049A495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00CE0D8B2058231300FAADAB /* AirQualityMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CE0D8D2058231300FAADAB /* AirQualityMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityMonitorTests.swift; sourceTree = "<group>"; };
+		00CE0D8F2058231300FAADAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00CE0D9820582CD600FAADAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00CE0D9A20582CE400FAADAB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00F51A9D20060B3D00AEFAB3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +130,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00CE0D882058231300FAADAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00F56EA22000FBB60011C630 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +253,15 @@
 			path = StationList;
 			sourceTree = "<group>";
 		};
+		00CE0D8C2058231300FAADAB /* AirQualityMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				00CE0D8D2058231300FAADAB /* AirQualityMonitorTests.swift */,
+				00CE0D8F2058231300FAADAB /* Info.plist */,
+			);
+			path = AirQualityMonitorTests;
+			sourceTree = "<group>";
+		};
 		00F51AA52006210C00AEFAB3 /* AirQualityIndex */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				00F56EA72000FBB60011C630 /* AirQualityMonitor */,
+				00CE0D8C2058231300FAADAB /* AirQualityMonitorTests */,
 				00F56EA62000FBB60011C630 /* Products */,
 				68EC2E884DFE9D5EBA42BE6A /* Pods */,
 				6A9E9FBD84338390B5A816F4 /* Frameworks */,
@@ -305,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				00F56EA52000FBB60011C630 /* AirQualityMonitor.app */,
+				00CE0D8B2058231300FAADAB /* AirQualityMonitorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +374,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00CE0D8A2058231300FAADAB /* AirQualityMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00CE0D942058231300FAADAB /* Build configuration list for PBXNativeTarget "AirQualityMonitorTests" */;
+			buildPhases = (
+				00CE0D872058231300FAADAB /* Sources */,
+				00CE0D882058231300FAADAB /* Frameworks */,
+				00CE0D892058231300FAADAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00CE0D912058231300FAADAB /* PBXTargetDependency */,
+			);
+			name = AirQualityMonitorTests;
+			productName = AirQualityMonitorTests;
+			productReference = 00CE0D8B2058231300FAADAB /* AirQualityMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		00F56EA42000FBB60011C630 /* AirQualityMonitor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F56EB72000FBB60011C630 /* Build configuration list for PBXNativeTarget "AirQualityMonitor" */;
@@ -372,6 +422,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = KarolPiatek;
 				TargetAttributes = {
+					00CE0D8A2058231300FAADAB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 00F56EA42000FBB60011C630;
+					};
 					00F56EA42000FBB60011C630 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -385,6 +440,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 00F56E9C2000FBB60011C630;
 			productRefGroup = 00F56EA62000FBB60011C630 /* Products */;
@@ -392,11 +448,19 @@
 			projectRoot = "";
 			targets = (
 				00F56EA42000FBB60011C630 /* AirQualityMonitor */,
+				00CE0D8A2058231300FAADAB /* AirQualityMonitorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00CE0D892058231300FAADAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00F56EA32000FBB60011C630 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,6 +549,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00CE0D872058231300FAADAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CE0D8E2058231300FAADAB /* AirQualityMonitorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00F56EA12000FBB60011C630 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -532,11 +604,64 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		00CE0D912058231300FAADAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00F56EA42000FBB60011C630 /* AirQualityMonitor */;
+			targetProxy = 00CE0D902058231300FAADAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00CE0D9920582CD600FAADAB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00CE0D9820582CD600FAADAB /* en */,
+				00CE0D9A20582CE400FAADAB /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		00CE0D922058231300FAADAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TJ4RSWW635;
+				INFOPLIST_FILE = AirQualityMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KarolPiatek.AirQualityMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQualityMonitor.app/AirQualityMonitor";
+			};
+			name = Debug;
+		};
+		00CE0D932058231300FAADAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TJ4RSWW635;
+				INFOPLIST_FILE = AirQualityMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KarolPiatek.AirQualityMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQualityMonitor.app/AirQualityMonitor";
+			};
+			name = Release;
+		};
 		00F56EB52000FBB60011C630 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -594,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -675,6 +801,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00CE0D942058231300FAADAB /* Build configuration list for PBXNativeTarget "AirQualityMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CE0D922058231300FAADAB /* Debug */,
+				00CE0D932058231300FAADAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00F56EA02000FBB60011C630 /* Build configuration list for PBXProject "AirQualityMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
