@@ -61,19 +61,19 @@ enum IndexNameEnum {
     var textValue: String {
         switch self {
         case .veryGood:
-            return "Bardzo dobry"
+            return "VeryGood".localized
         case .good:
-            return "Dobry"
+            return "Good".localized
         case .moderate:
-            return "Umiarkowany"
+            return "Moderate".localized
         case .sufficient:
-            return "Dostateczny"
+            return "Sufficient".localized
         case .bad:
-            return "Zły"
+            return "Bad".localized
         case .veryBad:
-            return "Bardzo zły"
+            return "VeryBad".localized
         case .noValue:
-            return "Brak danych"
+            return "NoData".localized
         }
     }
     

@@ -7,3 +7,11 @@
 */
 
 "NoData" = "Brak Danych";
+"MeasurementValue" = "Brak";
+"VeryGood" = "Bardzo dobry";
+"Good" = "Dobry";
+"Moderate" = "Umiarkowany";
+"Sufficient" = "Dostateczny";
+"Bad" = "Zły";
+"VeryBad" = "Bardzo zły";
+"Back" = "Cofnij";

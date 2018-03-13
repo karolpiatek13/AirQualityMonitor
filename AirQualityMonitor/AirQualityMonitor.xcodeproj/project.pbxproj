@@ -22,6 +22,7 @@
 		0047DFD12004066D0049A495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0047DFD02004066D0049A495 /* LaunchScreen.storyboard */; };
 		00CE0D9720582CD600FAADAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00CE0D9920582CD600FAADAB /* Localizable.strings */; };
 		00CE0D9E205839C700FAADAB /* StationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE0D9D205839C700FAADAB /* StationTests.swift */; };
+		00CE0DA220587B1300FAADAB /* AirQualityViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE0DA120587B1300FAADAB /* AirQualityViewModelTests.swift */; };
 		00F51A9E20060B3D00AEFAB3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51A9D20060B3D00AEFAB3 /* TabBarViewController.swift */; };
 		00F51AA02006198600AEFAB3 /* AirQualityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51A9F2006198600AEFAB3 /* AirQualityCoordinator.swift */; };
 		00F51AA22006199800AEFAB3 /* ChartsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51AA12006199800AEFAB3 /* ChartsCoordinator.swift */; };
@@ -88,6 +89,7 @@
 		00CE0D9820582CD600FAADAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00CE0D9A20582CE400FAADAB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00CE0D9D205839C700FAADAB /* StationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTests.swift; sourceTree = "<group>"; };
+		00CE0DA120587B1300FAADAB /* AirQualityViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityViewModelTests.swift; sourceTree = "<group>"; };
 		00F51A9D20060B3D00AEFAB3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		00F51A9F2006198600AEFAB3 /* AirQualityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityCoordinator.swift; sourceTree = "<group>"; };
 		00F51AA12006199800AEFAB3 /* ChartsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCoordinator.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		00CE0D8C2058231300FAADAB /* AirQualityMonitorTests */ = {
 			isa = PBXGroup;
 			children = (
+				00CE0DA120587B1300FAADAB /* AirQualityViewModelTests.swift */,
 				00CE0D9D205839C700FAADAB /* StationTests.swift */,
 				00CE0D8F2058231300FAADAB /* Info.plist */,
 			);
@@ -554,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CE0D9E205839C700FAADAB /* StationTests.swift in Sources */,
+				00CE0DA220587B1300FAADAB /* AirQualityViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

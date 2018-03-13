@@ -35,7 +35,7 @@ class AirQualityIndexViewController: UIViewController {
         super.viewDidLoad()
         setupData()
         setupCollectionView()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back".localized, style: .plain, target: self, action: #selector(goBack))
     }
     
     override func viewWillAppear(_ animated: Bool) {

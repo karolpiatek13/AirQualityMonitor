@@ -22,25 +22,26 @@ class AirQualityViewModel: BaseTabViewModel {
     override init(flowDelegate: CoordinatorProtocol, station: Station) {
         super.init(flowDelegate: flowDelegate, station: station)
         self.stationName.value = station.stationName ?? ""
-        getLowestMeasurement()
+        subscribeLowestMeasurement()
     }
     
-    func getLowestMeasurement() {
+    func subscribeLowestMeasurement() {
         measurementsSection.subscribe(onNext: { item in
             guard let measurements = super.measurements else { return }
-            self.getLowestMeasurement(measurements: measurements)
+            let lowest = self.getLowestMeasurement(measurements: measurements)
+            self.lowestMeasurement.onNext(lowest)
         }).disposed(by: bag)
     }
     
-    func getLowestMeasurement(measurements: [Measurement]) {
-        guard var lowestMeas = measurements.first else { return }
+    func getLowestMeasurement(measurements: [Measurement]) -> Measurement {
+        guard var lowest = measurements.first else { return Measurement() }
         for measurement in measurements {
-            guard let lowest = lowestMeas.indexLevelEnum?.rawValue,
-                let current = measurement.indexLevelEnum?.rawValue else { return }
-            if lowest > current {
-                lowestMeas = measurement
+            guard let lowestValue = lowest.indexLevelEnum?.rawValue,
+                let current = measurement.indexLevelEnum?.rawValue else { return Measurement() }
+            if lowestValue > current {
+                lowest = measurement
             }
         }
-        self.lowestMeasurement.onNext(lowestMeas)
+        return lowest
     }
 }
