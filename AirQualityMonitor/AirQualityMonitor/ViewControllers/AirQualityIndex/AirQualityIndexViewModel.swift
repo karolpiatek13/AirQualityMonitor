@@ -34,8 +34,9 @@ class AirQualityViewModel: BaseTabViewModel {
     }
     
     func getLowestMeasurement(measurements: [Measurement]) -> Measurement {
-        guard var lowest = measurements.first else { return Measurement() }
-        for measurement in measurements {
+        let newMeasurements = measurements.filter { $0.indexLevelEnum?.rawValue != nil }
+        guard var lowest = newMeasurements.first else { return Measurement() }
+        for measurement in newMeasurements {
             guard let lowestValue = lowest.indexLevelEnum?.rawValue,
                 let current = measurement.indexLevelEnum?.rawValue else { return Measurement() }
             if lowestValue > current {

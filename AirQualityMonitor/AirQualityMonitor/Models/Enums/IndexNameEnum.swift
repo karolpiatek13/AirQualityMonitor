@@ -30,6 +30,25 @@ enum IndexNameEnum {
         }
     }
     
+    init(rawValue: Int) {
+        switch rawValue {
+        case 6:
+            self = .veryGood
+        case 5:
+            self = .good
+        case 4:
+            self = .moderate
+        case 3:
+            self = .sufficient
+        case 2:
+            self = .bad
+        case 1:
+            self = .veryBad
+        default:
+            self = .noValue
+        }
+    }
+    
     var colorValue: UIColor {
         switch self {
         case .veryGood:
