@@ -38,6 +38,13 @@ class AirQualityViewModelTests: XCTestCase {
         XCTAssert(lowest.indexLevelEnum == IndexNameEnum.veryGood)
     }
     
+    func testDefaultValueArray() {
+        let measurement = Measurement()
+        measurement.indexLevelEnum = IndexNameEnum.noValue
+        let lowest = vm.getLowestMeasurement(measurements: [measurement])
+        XCTAssert(lowest.indexLevelEnum == IndexNameEnum.noValue)
+    }
+    
     func testReversedSortedArray() {
         for index in (1..<6).reversed() {
             let measurement = AirQualityMonitor.Measurement()
