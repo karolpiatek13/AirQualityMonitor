@@ -19,7 +19,7 @@ class APITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        provider = NetworkProvider<AirQualityService>()
+        provider = NetworkProvider<AirQualityService>(stubClosure: MoyaProvider.immediatelyStub)
     }
     
     override func tearDown() {
