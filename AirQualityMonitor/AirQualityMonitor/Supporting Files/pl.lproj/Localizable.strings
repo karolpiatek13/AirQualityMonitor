@@ -15,3 +15,5 @@
 "Bad" = "Zły";
 "VeryBad" = "Bardzo zły";
 "Back" = "Cofnij";
+"lastupDateTitle" = "Ostatni pomiar:";
+"airStatusTitle" = "Stan powietrza";

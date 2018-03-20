@@ -15,3 +15,5 @@
 "Bad" = "Bad";
 "VeryBad" = "Very bad";
 "Back" = "Back";
+"lastupDateTitle" = "Last measurement:";
+"airStatusTitle" = "Air status";
