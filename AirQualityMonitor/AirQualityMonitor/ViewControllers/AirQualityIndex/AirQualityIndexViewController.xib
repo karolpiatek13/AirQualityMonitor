@@ -12,10 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AirQualityIndexViewController" customModule="AirQualityMonitor" customModuleProvider="target">
             <connections>
+                <outlet property="airStatusTitle" destination="Rfh-8A-OD6" id="rrN-Kz-7rw"/>
                 <outlet property="airStatusValueLabel" destination="IK0-Vh-YSy" id="nXb-CF-IaJ"/>
                 <outlet property="airStatusView" destination="dpg-BS-ide" id="dDJ-kQ-6m7"/>
                 <outlet property="collectionView" destination="7Jt-0C-q8G" id="VWE-Po-UHl"/>
                 <outlet property="lastupDateLabel" destination="Zz7-jN-D0w" id="hCq-XW-KNp"/>
+                <outlet property="lastupDateTitle" destination="wk1-LK-QVU" id="TPk-JK-MPf"/>
                 <outlet property="stationNameLanel" destination="lAt-jP-Sgk" id="VPY-mk-78p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

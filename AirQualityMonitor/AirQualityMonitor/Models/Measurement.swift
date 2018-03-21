@@ -12,7 +12,7 @@ class Measurement {
     var name: String
     var code: String
     var sensorId: Int
-    var value: String = "Brak"
+    var value: String = "MeasurementValue".localized
     var date: String?
     var indexLevelEnum: IndexNameEnum?
     

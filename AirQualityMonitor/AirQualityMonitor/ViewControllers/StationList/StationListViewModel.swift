@@ -45,20 +45,4 @@ class StationListViewModel {
     func showStation(station: Station) {
         delegate.showMainTabBar(station: station)
     }
-    
-    func fetchSensor() {
-        provider.rx.request(.stationSensors(id: 14))
-            .asObservable()
-            .map([Sensor].self)
-            .subscribe { event in
-                switch event {
-                case .next:
-                    print("next")
-                case .error:
-                    print("error")
-                case .completed:
-                    print("completed")
-                }
-        }.disposed(by: bag)
-    }
 }

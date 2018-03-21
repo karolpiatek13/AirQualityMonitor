@@ -30,6 +30,25 @@ enum IndexNameEnum {
         }
     }
     
+    init(rawValue: Int) {
+        switch rawValue {
+        case 6:
+            self = .veryGood
+        case 5:
+            self = .good
+        case 4:
+            self = .moderate
+        case 3:
+            self = .sufficient
+        case 2:
+            self = .bad
+        case 1:
+            self = .veryBad
+        default:
+            self = .noValue
+        }
+    }
+    
     var colorValue: UIColor {
         switch self {
         case .veryGood:
@@ -61,19 +80,19 @@ enum IndexNameEnum {
     var textValue: String {
         switch self {
         case .veryGood:
-            return "Bardzo dobry"
+            return "VeryGood".localized
         case .good:
-            return "Dobry"
+            return "Good".localized
         case .moderate:
-            return "Umiarkowany"
+            return "Moderate".localized
         case .sufficient:
-            return "Dostateczny"
+            return "Sufficient".localized
         case .bad:
-            return "Zły"
+            return "Bad".localized
         case .veryBad:
-            return "Bardzo zły"
+            return "VeryBad".localized
         case .noValue:
-            return "Brak danych"
+            return "NoData".localized
         }
     }
     

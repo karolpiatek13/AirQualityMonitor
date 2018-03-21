@@ -17,6 +17,8 @@ class AirQualityIndexViewController: UIViewController {
     @IBOutlet weak var airStatusView: UIView!
     @IBOutlet weak var airStatusValueLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var lastupDateTitle: UILabel!
+    @IBOutlet weak var airStatusTitle: UILabel!
     
     var dataSource: RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>?
     var viewModel: AirQualityViewModel!
@@ -35,7 +37,7 @@ class AirQualityIndexViewController: UIViewController {
         super.viewDidLoad()
         setupData()
         setupCollectionView()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back".localized, style: .plain, target: self, action: #selector(goBack))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +46,8 @@ class AirQualityIndexViewController: UIViewController {
     }
     
     func setupData() {
+        lastupDateTitle.text = "lastupDateTitle".localized
+        airStatusTitle.text = "airStatusTitle".localized
         viewModel.stationName.asObservable().bind(to: stationNameLanel.rx.text).disposed(by: bag)
         viewModel.lastupDate.asObservable().bind(to: lastupDateLabel.rx.text).disposed(by: bag)
         viewModel.airStatus.asObservable().subscribe(onNext: { status in

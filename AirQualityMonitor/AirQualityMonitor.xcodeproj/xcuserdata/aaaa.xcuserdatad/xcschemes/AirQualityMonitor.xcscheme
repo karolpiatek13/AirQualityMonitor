@@ -39,6 +39,26 @@
                ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "001747D520601CCC00609B51"
+               BuildableName = "APITests.xctest"
+               BlueprintName = "APITests"
+               ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "00C24ED62061289600FE6189"
+               BuildableName = "AirQualityMonitorUITests.xctest"
+               BlueprintName = "AirQualityMonitorUITests"
+               ReferencedContainer = "container:AirQualityMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

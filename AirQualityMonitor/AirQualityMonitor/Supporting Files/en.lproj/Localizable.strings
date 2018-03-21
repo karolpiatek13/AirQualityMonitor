@@ -7,3 +7,13 @@
 */
 
 "NoData" = "No data";
+"MeasurementValue" = "No value";
+"VeryGood" = "Very good";
+"Good" = "Good";
+"Moderate" = "Moderate";
+"Sufficient" = "Sufficient";
+"Bad" = "Bad";
+"VeryBad" = "Very bad";
+"Back" = "Back";
+"lastupDateTitle" = "Last measurement:";
+"airStatusTitle" = "Air status";

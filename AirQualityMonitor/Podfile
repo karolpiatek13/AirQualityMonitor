@@ -13,3 +13,8 @@ end
 target 'AirQualityMonitor' do
   shared_pods
 end
+
+target 'APITests' do
+    pod 'Moya/RxSwift', '~> 10.0'
+    pod 'RxSwift', '~> 4.0.0'
+end
