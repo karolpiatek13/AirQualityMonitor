@@ -1,9 +1,10 @@
 language: objective-c
 osx_image: xcode9.2
+install: travis_wait 4 mvn install
 
 before_install:
     - pod repo update
 
 script:
-    - ./script_with_folds
     - xcodebuild clean build -sdk iphonesimulator -workspace AirQualityMonitor.xcworkspace -scheme AirQualityMonitor CODE_SIGNING_REQUIRED=NO
+    - xcodebuild test -workspace AirQualityMonitor.xcworkspace -scheme AirQualityMonitor -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
