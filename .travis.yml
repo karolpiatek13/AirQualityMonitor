@@ -5,5 +5,5 @@ before_install:
     - pod repo update
 
 script:
-    - xcodebuild clean build -sdk iphonesimulator -workspace AirQualityMonitor.xcworkspace -scheme AirQualityMonitor CODE_SIGNING_REQUIRED=NO
     - ./script_with_folds
+    - xcodebuild clean build -sdk iphonesimulator -workspace AirQualityMonitor.xcworkspace -scheme AirQualityMonitor CODE_SIGNING_REQUIRED=NO
