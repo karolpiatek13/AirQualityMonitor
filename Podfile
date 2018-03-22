@@ -1,13 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 use_frameworks!
+platform :ios, '11.2'
 
 def shared_pods
     pod 'RxSwift', '~> 4.0.0'
     pod 'RxCocoa', '~> 4.0.0'
     pod 'Moya/RxSwift', '~> 10.0'
     pod 'RxDataSources', '~> 3.0'
-    pod 'Charts', '~> 3.0.4'
+    pod 'Charts', '~> 3.0.5'
 end
 
 target 'AirQualityMonitor' do
