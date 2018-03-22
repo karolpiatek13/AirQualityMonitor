@@ -60,6 +60,7 @@ class AirQualityIndexViewController: UIViewController {
     func setupCollectionView() {
         collectionView.backgroundColor = .clear
         collectionView.register(UINib(nibName: MeasurementCell.typeName, bundle: nil), forCellWithReuseIdentifier: MeasurementCell.typeName)
+        collectionView.rx.setDelegate(self).disposed(by: bag)
         dataSource = RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>(configureCell: { _, collectionView, index, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MeasurementCell.typeName, for: index) as? MeasurementCell else { return UICollectionViewCell() }
             cell.configure(measurement: item)
@@ -71,5 +72,14 @@ class AirQualityIndexViewController: UIViewController {
     @objc
     func goBack() {
         viewModel.flowDelegate.backToParent()
+    }
+}
+
+extension AirQualityIndexViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var width: CGFloat = collectionView.frame.size.width
+        width *= width / 3 > 100 ? 0.31 : 0.48
+        return CGSize(width: width, height: width)
     }
 }

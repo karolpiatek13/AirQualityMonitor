@@ -41,7 +41,6 @@
 		00F51AC720067CE800AEFAB3 /* IndexNameEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51AC620067CE800AEFAB3 /* IndexNameEnum.swift */; };
 		00F51ACA200688E300AEFAB3 /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51AC8200688E300AEFAB3 /* MeasurementCell.swift */; };
 		00F51ACB200688E300AEFAB3 /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F51AC9200688E300AEFAB3 /* MeasurementCell.xib */; };
-		00F51ACD2007527300AEFAB3 /* LeftAlignedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51ACC2007527300AEFAB3 /* LeftAlignedCollectionView.swift */; };
 		00F51AD12007661100AEFAB3 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51ACF2007661100AEFAB3 /* ChartsViewController.swift */; };
 		00F51AD22007661100AEFAB3 /* ChartsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F51AD02007661100AEFAB3 /* ChartsViewController.xib */; };
 		00F51AD42007661C00AEFAB3 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F51AD32007661C00AEFAB3 /* ChartsViewModel.swift */; };
@@ -129,7 +128,6 @@
 		00F51AC620067CE800AEFAB3 /* IndexNameEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexNameEnum.swift; sourceTree = "<group>"; };
 		00F51AC8200688E300AEFAB3 /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
 		00F51AC9200688E300AEFAB3 /* MeasurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementCell.xib; sourceTree = "<group>"; };
-		00F51ACC2007527300AEFAB3 /* LeftAlignedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionView.swift; sourceTree = "<group>"; };
 		00F51ACF2007661100AEFAB3 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		00F51AD02007661100AEFAB3 /* ChartsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsViewController.xib; sourceTree = "<group>"; };
 		00F51AD32007661C00AEFAB3 /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 				00F56EAF2000FBB60011C630 /* Assets.xcassets */,
 				0047DFC02003D7410049A495 /* Constants.swift */,
 				002388F2200512E7006AEFF5 /* RxDataSourcesSection.swift */,
-				00F51ACC2007527300AEFAB3 /* LeftAlignedCollectionView.swift */,
 				00CE0D9920582CD600FAADAB /* Localizable.strings */,
 			);
 			path = "Supporting Files";
@@ -783,7 +780,6 @@
 				0047DFCA2004017F0049A495 /* StationListViewController.swift in Sources */,
 				5E71D8FF2004A41D008AA023 /* NetworkProvider.swift in Sources */,
 				002388F3200512E7006AEFF5 /* RxDataSourcesSection.swift in Sources */,
-				00F51ACD2007527300AEFAB3 /* LeftAlignedCollectionView.swift in Sources */,
 				00F51AD12007661100AEFAB3 /* ChartsViewController.swift in Sources */,
 				00F51ABD2006366300AEFAB3 /* IndexLevel.swift in Sources */,
 				00F51ABF20063E1800AEFAB3 /* Measurement.swift in Sources */,
