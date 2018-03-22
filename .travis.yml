@@ -6,3 +6,4 @@ before_install:
 
 script:
     - xcodebuild clean build -sdk iphonesimulator -workspace AirQualityMonitor.xcworkspace -scheme AirQualityMonitor CODE_SIGNING_REQUIRED=NO
+    - ./script_with_folds
