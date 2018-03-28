@@ -49,8 +49,8 @@ class AirQualityIndexViewController: UIViewController {
         lastupDateTitle.text = "lastupDateTitle".localized
         airStatusTitle.text = "airStatusTitle".localized
         viewModel.stationName.asObservable().bind(to: stationNameLanel.rx.text).disposed(by: bag)
-        viewModel.lastupDate.asObservable().bind(to: lastupDateLabel.rx.text).disposed(by: bag)
-        viewModel.airStatus.asObservable().subscribe(onNext: { status in
+        viewModel.lastupDate.bind(to: lastupDateLabel.rx.text).disposed(by: bag)
+        viewModel.airStatus.subscribe(onNext: { status in
             self.airStatusValueLabel.text = status.textValue
             self.airStatusValueLabel.textColor = status.textColor
             self.airStatusView.backgroundColor = status.colorValue

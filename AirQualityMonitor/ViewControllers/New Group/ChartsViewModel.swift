@@ -14,16 +14,16 @@ class ChartsViewModel: BaseTabViewModel {
     var chartValues = BehaviorSubject<[SensorDataRead]>(value: [])
     var displayMeasurement = BehaviorSubject<Measurement>(value: Measurement())
     var displayDate: Observable<String> {
-        return displayMeasurement.asObservable().map { $0.date ?? "" }
+        return displayMeasurement.map { $0.date ?? "" }
     }
     var displayValue: Observable<String> {
-        return displayMeasurement.asObservable().map { $0.value }
+        return displayMeasurement.map { $0.value }
     }
     var displayName: Observable<String> {
-        return displayMeasurement.asObservable().map { $0.name }
+        return displayMeasurement.map { $0.name }
     }
     var displayColor: Observable<UIColor> {
-        return displayMeasurement.asObservable().map { $0.indexLevelEnum?.colorValue ?? .white }
+        return displayMeasurement.map { $0.indexLevelEnum?.colorValue ?? .white }
     }
     
     func fetchFirstChartData() {

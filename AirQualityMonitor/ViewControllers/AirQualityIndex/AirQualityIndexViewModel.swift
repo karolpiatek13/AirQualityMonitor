@@ -13,10 +13,10 @@ class AirQualityViewModel: BaseTabViewModel {
     var stationName = Variable<String>("")
     var lowestMeasurement = PublishSubject<Measurement>()
     var lastupDate: Observable<String> {
-        return lowestMeasurement.asObservable().map { $0.date ?? "" }
+        return lowestMeasurement.map { $0.date ?? "" }
     }
     var airStatus: Observable<IndexNameEnum> {
-        return lowestMeasurement.asObservable().map { $0.indexLevelEnum ?? IndexNameEnum.noValue }
+        return lowestMeasurement.map { $0.indexLevelEnum ?? IndexNameEnum.noValue }
     }
     
     override init(flowDelegate: CoordinatorProtocol, station: Station) {

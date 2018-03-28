@@ -14,10 +14,10 @@ class StationDetailsViewModel {
     var flowDelegate: CoordinatorProtocol
     var station = BehaviorSubject<Station>(value: Station())
     var stationName: Observable<String> {
-        return station.asObservable().map { $0.stationName ?? "Brak danych" }
+        return station.map { $0.stationName ?? "Brak danych" }
     }
     var stationAddress: Observable<String> {
-        return station.asObservable().map {
+        return station.map {
             $0.getDisplayAddress()
         }
     }
