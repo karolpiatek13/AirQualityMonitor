@@ -19,6 +19,8 @@ class AirQualityIndexViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lastupDateTitle: UILabel!
     @IBOutlet weak var airStatusTitle: UILabel!
+    @IBOutlet weak var airStatusViewUpConstraint: NSLayoutConstraint!
+    
     
     var dataSource: RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>?
     var viewModel: AirQualityViewModel!
@@ -37,14 +39,20 @@ class AirQualityIndexViewController: UIViewController {
         super.viewDidLoad()
         setupData()
         setupCollectionView()
+        viewModel.getStationSensors()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back".localized, style: .plain, target: self, action: #selector(goBack))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.getStationSensors()
+        setupAnimations()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addAnimations()
+    }
+
     func setupData() {
         lastupDateTitle.text = "lastupDateTitle".localized
         airStatusTitle.text = "airStatusTitle".localized
@@ -64,9 +72,33 @@ class AirQualityIndexViewController: UIViewController {
         dataSource = RxCollectionViewSectionedReloadDataSource<RxDataSourcesSection<Measurement>>(configureCell: { _, collectionView, index, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MeasurementCell.typeName, for: index) as? MeasurementCell else { return UICollectionViewCell() }
             cell.configure(measurement: item)
+            cell.alpha = 0
             return cell
         })
         viewModel.measurementsSection.bind(to: collectionView.rx.items(dataSource: dataSource!)).disposed(by: bag)
+    }
+    
+    func setupAnimations() {
+        stationNameLanel.alpha = 0
+        lastupDateTitle.alpha = 0
+        lastupDateLabel.alpha = 0
+        
+        airStatusView.alpha = 0
+        airStatusViewUpConstraint.constant -= 30
+    }
+    
+    func addAnimations() {
+        UIView.animate(withDuration: 0.7) {
+            self.stationNameLanel.alpha = 1
+            self.lastupDateTitle.alpha = 1
+            self.lastupDateLabel.alpha = 1
+        }
+        self.airStatusViewUpConstraint.constant += 30
+        UIView.animate(withDuration: 1.0, delay: 0.3, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0,
+            animations: {
+                self.airStatusView.alpha = 1
+                self.view.layoutIfNeeded()
+        })
     }
     
     @objc
@@ -81,5 +113,11 @@ extension AirQualityIndexViewController: UICollectionViewDelegateFlowLayout {
         var width: CGFloat = collectionView.frame.size.width
         width *= width / 3 > 100 ? 0.31 : 0.48
         return CGSize(width: width, height: width)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.5, delay: 0.4 + 0.05 * Double(indexPath.row), animations: {
+            cell.alpha = 1
+        })
     }
 }

@@ -15,6 +15,7 @@
                 <outlet property="airStatusTitle" destination="Rfh-8A-OD6" id="rrN-Kz-7rw"/>
                 <outlet property="airStatusValueLabel" destination="IK0-Vh-YSy" id="nXb-CF-IaJ"/>
                 <outlet property="airStatusView" destination="dpg-BS-ide" id="dDJ-kQ-6m7"/>
+                <outlet property="airStatusViewUpConstraint" destination="o7x-tf-BWv" id="auq-sI-sB6"/>
                 <outlet property="collectionView" destination="7Jt-0C-q8G" id="VWE-Po-UHl"/>
                 <outlet property="lastupDateLabel" destination="Zz7-jN-D0w" id="hCq-XW-KNp"/>
                 <outlet property="lastupDateTitle" destination="wk1-LK-QVU" id="TPk-JK-MPf"/>
@@ -79,7 +80,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-0C-q8G">
                     <rect key="frame" x="16" y="178" width="288" height="370"/>
                     <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bDv-fx-rDL" customClass="LeftAlignedCollectionViewFlowLayout" customModule="AirQualityMonitor" customModuleProvider="target">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bDv-fx-rDL">
                         <size key="itemSize" width="115" height="110"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -92,9 +93,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Jt-0C-q8G" secondAttribute="bottom" constant="20" id="60O-5U-ZBF"/>
                 <constraint firstItem="dpg-BS-ide" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KHc-jZ-5KL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dpg-BS-ide" secondAttribute="trailing" constant="16" id="QNM-1h-oZ1"/>
+                <constraint firstItem="7Jt-0C-q8G" firstAttribute="top" secondItem="Zz7-jN-D0w" secondAttribute="bottom" constant="103" id="TXX-eT-PH5"/>
                 <constraint firstItem="lAt-jP-Sgk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="TaB-y0-IYt"/>
                 <constraint firstItem="lAt-jP-Sgk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="XDE-eS-Gxx"/>
-                <constraint firstItem="7Jt-0C-q8G" firstAttribute="top" secondItem="dpg-BS-ide" secondAttribute="bottom" constant="8" id="XQT-Uz-asy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Jt-0C-q8G" secondAttribute="trailing" constant="16" id="XeY-8Z-abA"/>
                 <constraint firstItem="wk1-LK-QVU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eKd-rN-UL8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zz7-jN-D0w" secondAttribute="trailing" constant="16" id="lqU-AY-t4L"/>
