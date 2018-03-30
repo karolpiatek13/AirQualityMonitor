@@ -14,6 +14,7 @@ class StationDetailsViewController: UIViewController {
     @IBOutlet weak var stationNameLabel: UILabel!
     @IBOutlet weak var stationAddressLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var detailsView: UIView!
     
     var viewModel: StationDetailsViewModel!
     let bag = DisposeBag()
@@ -31,6 +32,18 @@ class StationDetailsViewController: UIViewController {
         super.viewDidLoad()
         bindData()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        detailsView.alpha = 0.0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
+                        self.detailsView.alpha = 1.0
+        })
     }
     
     func bindData() {

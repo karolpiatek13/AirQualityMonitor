@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StationDetailsViewController" customModule="AirQualityMonitor" customModuleProvider="target">
             <connections>
+                <outlet property="detailsView" destination="VUZ-Tm-7mq" id="UuP-ky-PIs"/>
                 <outlet property="mapView" destination="ZzR-x3-thj" id="wBE-kH-daP"/>
                 <outlet property="stationAddressLabel" destination="ate-bn-K0C" id="stp-4Y-Wsh"/>
                 <outlet property="stationNameLabel" destination="cQW-Rz-fFy" id="23U-oK-AtJ"/>
