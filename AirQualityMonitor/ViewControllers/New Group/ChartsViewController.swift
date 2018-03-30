@@ -43,11 +43,6 @@ class ChartsViewController: UIViewController {
         setChart()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.fetchFirstChartData()
-    }
-    
     func bindData() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
         viewModel.displayMeasurement.subscribe(onNext: { measurement in
