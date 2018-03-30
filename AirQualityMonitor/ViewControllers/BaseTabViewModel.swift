@@ -25,7 +25,8 @@ class BaseTabViewModel {
     }
 
     func getStationSensors() {
-        provider.rx.request(.stationSensors(id: station.id ?? -1))
+        guard let id = station.id else { return }
+        provider.rx.request(.stationSensors(id: id))
             .asObservable()
             .share()
             .map([Sensor].self)
@@ -43,7 +44,8 @@ class BaseTabViewModel {
     }
     
     func getAirQualityIndex() {
-        provider.rx.request(.stationData(id: station.id ?? -1))
+        guard let id = station.id else { return }
+        provider.rx.request(.stationData(id: id))
             .asObservable()
             .share()
             .map(AirQualityIndex.self)
